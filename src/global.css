@@ -1,0 +1,14 @@
+:root {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  background-color: #1a1a1a;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+body, img, input {
+  padding: 0;
+  margin: 0;
+}

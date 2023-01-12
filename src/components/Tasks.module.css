@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333333;
+  width: 736px;
+  height: 72px;
+  border-radius: 8px;
+  margin: 24px 24px -12px;
+}
+
+input[type=checkbox] {
+  margin-left: 20px;
+  appearance: none;
+  border-radius: 50px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #4ea8de;
+  
+  margin: 16px 12px 32px  16px;
+}
+
+input[type=checkbox]:checked {
+  background: url('../assets/Vector.svg');
+  background-color: #5e60ce;
+  background-repeat: no-repeat;
+  background-position: 45% 55%;
+
+  border: 1px solid #5e60ce;
+}
+
+.container:has(:checked) {
+  text-decoration: line-through;
+}
+
+.container p {
+  margin: 16px 16px 32px 0px;
+  width: 632px;
+  max-height: 20px;
+  color: #f2f2f2; 
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.deleteButton {
+  background-color: #333;
+
+  border: none;
+  border-radius: 8px;
+
+  margin: 16px 16px 32px 0px;
+  height: 24px;
+  width: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s;
+}
+
+.deleteButton:hover {
+  background-color: #242424;
+  cursor: pointer;
+}
+
+.deleteButton img {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 400px;
+  }
+
+  input[type=checkbox] {
+    border-radius: 500px;
+    width: 20px;
+    height: 12px;
+  }
+
+  input[type=checkbox]:checked {
+    width: 22px;
+    height: 12px;
+  }
+  
+}
