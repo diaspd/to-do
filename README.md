@@ -55,7 +55,7 @@ This project was developed with the following technologies:
 <br></br>
 
 ## 🔖 Layout
-- [Ignite Lab - Figma](https://www.figma.com/file/v6gb4nemEKWQzWufY1AdDV/ToDo-List-(Copy)?node-id=0%3A1&t=dFB6fQN8qNazWevB-0)
+- [To-Do - Figma](https://www.figma.com/file/v6gb4nemEKWQzWufY1AdDV/ToDo-List-(Copy)?node-id=0%3A1&t=dFB6fQN8qNazWevB-0)
 
 <br></br>
 
