@@ -4,7 +4,8 @@
 
 <p align="center">
   <a href="#-Technologies"><b>Technologies</b></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-Project"><b>Project</b></a>&nbsp;&nbsp;&nbsp;
+  <a href="#-Project"><b>Project</b></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-Layout"><b>Layout</b></a>&nbsp;&nbsp;&nbsp;
 </p>
 
 <br></br>
@@ -45,10 +46,16 @@ This project was developed with the following technologies:
 - Reactjs
 - Type Script
 - Java Script
+- Vitejs
 </b>
 
 ## 📄 Project
 💰 .
+
+<br></br>
+
+## 🔖 Layout
+- [Ignite Lab - Figma](https://www.figma.com/file/v6gb4nemEKWQzWufY1AdDV/ToDo-List-(Copy)?node-id=0%3A1&t=dFB6fQN8qNazWevB-0)
 
 <br></br>
 
