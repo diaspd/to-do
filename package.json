@@ -1,6 +1,7 @@
 {
   "name": "to-do-list",
   "private": true,
+  "author": "Pedro Dias",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
