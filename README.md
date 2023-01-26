@@ -50,7 +50,7 @@ This project was developed with the following technologies:
 </b>
 
 ## 📄 Project
-💰 .
+💰 A to do list.
 
 <br></br>
 
