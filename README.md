@@ -1,7 +1,6 @@
 <div align="center">
-  <img alt="logo image" title="image" src="./src/assets/Logo.svg" width="35%" />
+  <h1> <img alt="logo image" title="image" src="./src/assets/Logo.svg" width="35%" /> </h1>
 </div> 
-###
 
 <p align="center">
   <a href="#-Technologies"><b>Technologies</b></a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
