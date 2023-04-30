@@ -51,6 +51,8 @@ This project was developed with the following technologies:
 - Vitejs
 </b>
 
+</br>
+
 ## 📄 Project
 💰 A to do list.
 
