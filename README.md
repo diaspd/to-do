@@ -8,7 +8,7 @@
   <a href="#-Layout"><b>Layout</b></a>&nbsp;&nbsp;&nbsp;
 </div>
 
-<br></br>
+---
 
 <div align="center">
   <img alt="project image" title="image" src="img.png" />
@@ -54,7 +54,7 @@ This project was developed with the following technologies:
 </br>
 
 ## 📄 Project
-💰 A to do list.
+💰 A to do list, using react concepts Immutability, useState, CSSmodules and more.
 
 <br></br>
 
