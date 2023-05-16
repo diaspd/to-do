@@ -11,7 +11,7 @@
 ---
 
 <div align="center">
-  <img alt="project image" title="image" src="img.png" />
+  <img alt="project image" title="image" src="./public/template.png" />
 </div> 
 
 <br></br>
