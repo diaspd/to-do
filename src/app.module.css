@@ -18,7 +18,7 @@
   background-color: #262626;
   color: #F2F2F2;
   width: 590px;
-  border: 1px solid #000;
+  border: 1px solid #0D0D0D;
 
   @media(max-width: 768px) {
     width: auto;
@@ -94,6 +94,9 @@
   flex-direction: column;
   
   font-weight: bold;
+  width: 100%;
+
+  padding-bottom: 50px;
 }
 
 .tasksContainerWrapper {
@@ -101,6 +104,8 @@
   align-items: center;
   justify-content: center;
 
+
+  margin-bottom: 24px;
   margin-top: 64px;
 }
 
@@ -144,33 +149,37 @@
   white-space: nowrap;
 }
 
-.newTasks {
+.emptyContent {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: #808080;
   margin-top: 24px;
 
-  color: #808080;
+  font-weight: 400;
 
+  outline: none;
+  width: 780px;
+  border-top: 1px solid #333333;
   border-radius: 16px;
-  border-top: 1px solid #808080;
-  width: 763px;
-  margin-bottom: 100px;
-}
+  padding-top: 64px;
 
-.newTasks img {
-  margin-top: 64px;
-  margin-left: 110px;
-}
+  @media (max-width: 768px) {
+    width: 600px;
+  }
 
+  @media (max-width: 600px) {
+    width: 400px;
+  }
+
+  @media (max-width: 400px) {
+    width: 300px;
+  }
+}
 
 @media (max-width: 768px) {
   .tasks {
     margin-top: 24px;
-  }
-
-  .newTasks {
-    width: 100%;
   }
 }

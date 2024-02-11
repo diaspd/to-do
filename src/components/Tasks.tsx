@@ -9,7 +9,6 @@ interface TaskProps {
 }
 
 export function Tasks({ id, content, onDeleteTask, completeTask}: TaskProps) {
-
   function handleDeleteTask() {
     onDeleteTask(id);
   }
@@ -29,9 +28,9 @@ export function Tasks({ id, content, onDeleteTask, completeTask}: TaskProps) {
           onMouseDown={selectTaskToComplete}
         />
       </div>
-      <span>{content}
-      </span>
-      
+
+      <p>{content}</p>
+
         <button 
           className={styles.deleteButton}
           onClick={handleDeleteTask}

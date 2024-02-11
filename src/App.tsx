@@ -131,7 +131,7 @@ export default function App() {
   }
 
   return (
-    <>
+    <div>
      <Header />
     
         <form onSubmit={handleCreateNewTask} className={styles.createTask}>
@@ -173,30 +173,29 @@ export default function App() {
         </div> 
       </div>
  
-      <div className={styles.tasks}>
-        <div className={styles.newTasks}>
+        <div className={styles.tasks}>
             {taskList.length == 0 ? 
-            <div>
+            <div className={styles.emptyContent}>
               <img src={Clipboard} alt="imagem agenda" /> 
-              <p>Você ainda não tem tarefas cadastradas <br /> <br />
-                Crie tarefas e organize seus itens a fazer
-              </p> 
+              <strong style={{ marginTop: '16px'}}>Você ainda não tem tarefas cadastradas</strong> 
+              <span>Crie tarefas e organize seus itens a fazer</span> 
             </div>
               :
               taskList.map(task => {
                 return (
-                  <Tasks 
-                    id={task.id}
-                    key={task.id}
-                    content={task.content}
-                    onDeleteTask={deleteTask}
-                    completeTask={completeTask}             
-                  />
+                  <div>
+                    <Tasks 
+                      id={task.id}
+                      key={task.id}
+                      content={task.content}
+                      onDeleteTask={deleteTask}
+                      completeTask={completeTask}             
+                    />
+                  </div>
                 )
               }) 
               }
         </div>
       </div>
-    </>
   )
 }
