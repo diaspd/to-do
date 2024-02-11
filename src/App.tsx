@@ -11,6 +11,8 @@ import styles from './app.module.css';
 import { Tasks } from './components/Tasks';
 import { Header } from './components/Header';
 
+let speechRecognition: SpeechRecognition | null = null
+
 export default function App() {
   const [ taskList, setTaskList ] = useState([
     {
@@ -31,8 +33,6 @@ export default function App() {
 
   const SpeechRecognitionAPI =
   window.SpeechRecognition || window.webkitSpeechRecognition;
-
-  const speechRecognition = new SpeechRecognitionAPI();
 
   function saveTaskTitle(event) {
 		setTaskContent(event.target.value)
@@ -100,6 +100,8 @@ export default function App() {
 
     setIsRecording(true);
 
+    speechRecognition = new SpeechRecognitionAPI();
+
     speechRecognition.lang = "pt-BR";
     speechRecognition.continuous = true;
     speechRecognition.maxAlternatives = 1;
@@ -144,7 +146,7 @@ export default function App() {
 
          <div className={styles.buttonWrappper}>
           {isRecording ? (
-            <button onClick={handleStopRecording} className={styles.microfoneButton} type="button">
+          <button onClick={handleStopRecording} className={styles.microfoneButton} type="button">
             <img src={Pause} />
           </button>
           ): 
