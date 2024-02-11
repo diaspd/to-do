@@ -2,20 +2,65 @@
   display: flex;
   margin-top: -30px;
   justify-content: center;
+  gap: 8px;
+  width: 100%;
+
+  @media(max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .input {
+  display: flex;
   padding: 16px;
   border-radius: 8px;
   background-color: #262626;
-  color: #808080;
-  width: 650px;
-  margin-right: 8px;
+  color: #F2F2F2;
+  width: 590px;
   border: 1px solid #000;
+
+  @media(max-width: 768px) {
+    width: auto;
+  }
+}
+
+.buttonWrappper {
+  display: flex;
+  gap: 10px;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.microfoneButton {
+  background-color: #8284FA;
+  border: none;
+  border-radius: 8px;
+  color: #f2f2f2;
+  padding:8px;
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    width: 20%;
+  }
+}
+
+.microfoneButton:hover {
+  background-color: #5E60CE;
+  cursor: pointer;    
+}
+
+.microfoneImg {
+  height: 24px;
+  width: 24px;
 }
 
 .createButton {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: #136f9f;
   color: #f2f2f2;
@@ -25,7 +70,12 @@
   border-radius: 8px;
   border: none;
 
-  transition: 0.1s
+  transition: 0.1s;
+
+  @media (max-width: 768px) {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .createButton:hover {
@@ -46,33 +96,52 @@
   font-weight: bold;
 }
 
+.tasksContainerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 64px;
+}
+
 .tasksContainer{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 750px;
 }
 
-.info {
-  margin-top: 64px;
+.createdInfo {
   color: #4ea8de;
-  margin-right: 8px;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+.concludedInfo {
+  color: #8284FA;
+  white-space: nowrap;
+    font-weight: bold;
 }
 
 .count1 {
+  display: inline-block;
   background-color: #333333;
   color: #fff;
   border-radius: 60px;
   padding: 3px 10px;
-  margin-top: 64px;
 
-  margin-right: 32rem;
+  white-space: nowrap;
 }
 
 .count {
+  display: inline-block;
   background-color: #333333;
   color: #fff;
   border-radius: 60px;
   padding: 3px 10px;
-  margin-top: 64px;
+
+  white-space: nowrap;
 }
 
 .newTasks {
@@ -97,33 +166,8 @@
 
 
 @media (max-width: 768px) {
-  .header {
-    display: flex;
-    width: 100%;
-    height: 150px;
-  }
-
-  .info {
-    margin: 0px;
-  }
-
-  .count1 {
-    margin: 12px 80px 12px 12px;
-  }
-
-  .count {
-    margin: 12px;
-  }
-
   .tasks {
     margin-top: 24px;
-  }
-
-  .tasksContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 208px;
   }
 
   .newTasks {

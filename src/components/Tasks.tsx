@@ -20,15 +20,17 @@ export function Tasks({ id, content, onDeleteTask, completeTask}: TaskProps) {
 
   return( 
     <div className={styles.container}>
-      <input 
-        type="checkbox"
-        name={content}
-        id={content}
-        value={content}
-        onMouseDown={selectTaskToComplete}
-      />
-      <p>{content}
-      </p>
+      <div>
+        <input 
+          type="checkbox"
+          name={content}
+          id={content}
+          value={content}
+          onMouseDown={selectTaskToComplete}
+        />
+      </div>
+      <span>{content}
+      </span>
       
         <button 
           className={styles.deleteButton}

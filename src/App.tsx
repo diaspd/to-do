@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Plus from './assets/Plus.svg';
 import Clipboard from './assets/Clipboard.svg';
+import Microfone from './assets/Microfone.png';
 
 import styles from './app.module.css';
 import { Tasks } from './components/Tasks';
@@ -94,6 +95,12 @@ export default function App() {
             onInvalid={handleNewTaskInvalid}
             required
           />
+
+         <div className={styles.buttonWrappper} >
+          <button className={styles.microfoneButton} type="button">
+            <img src={Microfone} />
+          </button>
+
           <button 
             type="submit"
             className={styles.createButton}
@@ -101,14 +108,18 @@ export default function App() {
             Criar
             <img src={Plus} alt=""/> 
           </button>
+         </div>
         </form>
      
-      <div className={styles.tasks}>
+   
+      <div className={styles.tasksContainerWrapper}>
         <div className={styles.tasksContainer}>
-          <p className={styles.info}>Tarefas criadas</p> <p className={styles.count1}>{taskList.length}</p>
-          <p className={styles.info}>Concluídas</p> <p className={styles.count}>{completedTasks.length} de {taskList.length}</p>
+          <div className={styles.createdInfo}>Tarefas criadas <div className={styles.count1}>{taskList.length}</div></div> 
+          <div className={styles.concludedInfo}>Concluídas <div className={styles.count}>{completedTasks.length} de {taskList.length}</div></div> 
         </div> 
-
+      </div>
+ 
+      <div className={styles.tasks}>
         <div className={styles.newTasks}>
             {taskList.length == 0 ? 
             <div>
@@ -125,8 +136,7 @@ export default function App() {
                     key={task.id}
                     content={task.content}
                     onDeleteTask={deleteTask}
-                    completeTask={completeTask}
-                    
+                    completeTask={completeTask}             
                   />
                 )
               }) 
