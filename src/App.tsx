@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Plus from './assets/Plus.svg';
 import Clipboard from './assets/Clipboard.svg';
 import Microfone from './assets/Microfone.png';
+import Pause from './assets/Pause.png';
 
 import styles from './app.module.css';
 import { Tasks } from './components/Tasks';
@@ -24,8 +25,14 @@ export default function App() {
 		},
   ]);
   const [taskContent, setTaskContent] = useState('')
-
   const [completedTasks, setCompletedTasks] = useState([])
+
+  const [isRecording, setIsRecording] = useState(false)
+
+  const SpeechRecognitionAPI =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  const speechRecognition = new SpeechRecognitionAPI();
 
   function saveTaskTitle(event) {
 		setTaskContent(event.target.value)
@@ -82,6 +89,45 @@ export default function App() {
 		setTaskList(tasksUpdated)
 	}
 
+  function handleStartRecording() {
+    const isSpeechRecognitionAPIAvailable =
+      "SpeechRecognition" in window || "webkitSpeechRecognition" in window;
+
+    if (!isSpeechRecognitionAPIAvailable) {
+      alert("Infelizmente seu navegador não suporta a API de gravação!");
+      return;
+    }
+
+    setIsRecording(true);
+
+    speechRecognition.lang = "pt-BR";
+    speechRecognition.continuous = true;
+    speechRecognition.maxAlternatives = 1;
+    speechRecognition.interimResults = true;
+
+    speechRecognition.onresult = (event) => {
+      const transcription = Array.from(event.results).reduce((text, result) => {
+        return text.concat(result[0].transcript);
+      }, "");
+
+      setTaskContent(transcription);
+    };
+
+    speechRecognition.onerror = (event) => {
+      console.error(event);
+    };
+
+    speechRecognition.start();
+  }
+
+  function handleStopRecording() {
+    setIsRecording(false);
+
+    if (speechRecognition !== null) {
+      speechRecognition.stop();
+    }
+  }
+
   return (
     <>
      <Header />
@@ -96,11 +142,17 @@ export default function App() {
             required
           />
 
-         <div className={styles.buttonWrappper} >
-          <button className={styles.microfoneButton} type="button">
+         <div className={styles.buttonWrappper}>
+          {isRecording ? (
+            <button onClick={handleStopRecording} className={styles.microfoneButton} type="button">
+            <img src={Pause} />
+          </button>
+          ): 
+          <button onClick={handleStartRecording} className={styles.microfoneButton} type="button">
             <img src={Microfone} />
           </button>
-
+          }
+          
           <button 
             type="submit"
             className={styles.createButton}

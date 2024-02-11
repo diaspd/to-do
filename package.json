@@ -15,6 +15,7 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/dom-speech-recognition": "^0.0.4",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",
