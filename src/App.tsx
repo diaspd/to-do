@@ -125,8 +125,7 @@ export default function App() {
                     key={task.id}
                     content={task.content}
                     onDeleteTask={deleteTask}
-                    completeTask={completeTask}
-                    
+                    completeTask={completeTask}            
                   />
                 )
               }) 
