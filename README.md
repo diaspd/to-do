@@ -3,7 +3,7 @@
 </div> 
 
 <h2 align="center">
-  Link to project: <a href="https://to-do-tan-eight.vercel.app/" target="_blank">To Do</a>
+  Link to project: <a href="https://to-do-diaspd.vercel.app" target="_blank">To Do</a>
 </h2>
 
 <div align="center">
